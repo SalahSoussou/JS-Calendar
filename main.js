@@ -14,9 +14,11 @@ function fillCell(index, cnv) {
     x = cnv.width / 2,
     y = cnv.height / 2,
     itemSize = cnv.width * 0.6,
-    drawItem = drawItemFunction[index];
+    drawItem = drawItemFunction[index],
+    hue = Math.random() * 360;
+
   drawItem
-    ? drawItem(ctx, x, y, itemSize)
+    ? drawItem(ctx, x, y, itemSize, hue)
     : drawNumber(ctx, index, x, y, itemSize);
 }
 
